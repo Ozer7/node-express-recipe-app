@@ -1,0 +1,25 @@
+extends default
+
+block content 
+  div(style="text-align:center;")    
+    h1 Contact Us
+    
+    if successMessage
+      div(style="color: green; margin-bottom: 15px;") #{successMessage}
+    if errorMessage
+      div(style="color: red; margin-bottom: 15px;") #{errorMessage}
+
+    form(action="/contactus" method="get")
+      | Name:
+      br
+      input(type="text" name="name" required)
+      br
+      | Email:
+      br
+      input(type="email" name="email" required)
+      br
+      | Message:
+      br
+      textarea(name="message" placeholder="Enter your message here..." cols="50" rows="5" required)
+      br
+      input(type="submit" name="submit" value="Submit")

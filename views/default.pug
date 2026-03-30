@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='/css/styles.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+      block header 
+        div(style="background-color: #d8d9d9; padding-bottom: 10px; margin: -8px;")
+          img(style="display: block; margin: auto;" src="/images/RecipeCentralLogo.png" width="120")
+        div.navigation-bar
+          a(href='/') Home
+          span
+            a(href='/contactus') Contact Us
+          span 
+            a(href='/recipes') Recipes 
+          span 
+            a(href='/addAccount') Add Account
+      block content
+        p This is the #{title} page.
